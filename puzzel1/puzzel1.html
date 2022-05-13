@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puzzel</title>
+
+    <style>
+        body {
+            width: 300px;
+            height: 500px;
+            margin: auto;
+            background-color: black;
+        }
+        
+        h1 {
+            color: aliceblue;
+            text-align: center;
+        }
+        
+        .table {
+            user-select: none;
+        }
+        
+        input[type="button"] {
+            height: 70px;
+            width: 70px;
+            margin-top: 5px;
+            border-radius: 35px;
+            font-size: 30px;
+        }
+        
+        .reset {
+            margin-top: 50px;
+        }
+        
+        .reset button {
+            padding: 30px 60px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1>PUZZEL GAME</h1>
+
+    <br>
+    <br>
+
+    <table align="center" class="table">
+
+        <tr>
+            <td>
+                <input type="button" value="1" id="btn1" onclick="b1();win()">
+                <input type="button" value="2" id="btn2" onclick="b2();win()">
+                <input type="button" value="3" id="btn3" onclick="b3();win()">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="4" id="btn4" onclick="b4();win()">
+                <input type="button" value="5" id="btn5" onclick="b5();win()">
+                <input type="button" value="6" id="btn6" onclick="b6();win()">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="7" id="btn7" onclick="b7();win()">
+                <input type="button" value=" " id="btn8" onclick="b8();win()">
+                <input type="button" value="8" id="btn9" onclick="b9();win()">
+            </td>
+        </tr>
+
+    </table>
+
+    <div align="center" class="reset">
+        <button onclick="h1()">ReSet</button>
+    </div>
+
+
+    <script>
+        function b1() {
+            var d1 = document.getElementById('btn1').value;
+            var d2 = document.getElementById('btn2').value;
+            var d4 = document.getElementById('btn4').value;
+
+            if (d2 == ' ') {
+                document.getElementById('btn2').value = d1;
+                document.getElementById('btn1').value = ' ';
+            }
+            if (d4 == ' ') {
+                document.getElementById('btn4').value = d1;
+                document.getElementById('btn1').value = ' ';
+            }
+        }
+
+        function b2() {
+            var d1 = document.getElementById('btn1').value;
+            var d2 = document.getElementById('btn2').value;
+            var d3 = document.getElementById('btn3').value;
+            var d5 = document.getElementById('btn5').value;
+
+            if (d1 == ' ') {
+                document.getElementById('btn1').value = d2;
+                document.getElementById('btn2').value = ' ';
+            }
+            if (d3 == ' ') {
+                document.getElementById('btn3').value = d2;
+                document.getElementById('btn2').value = ' ';
+            }
+            if (d5 == ' ') {
+                document.getElementById('btn5').value = d2;
+                document.getElementById('btn2').value = ' ';
+            }
+        }
+
+        function b3() {
+            var d3 = document.getElementById('btn3').value;
+            var d2 = document.getElementById('btn2').value;
+            var d6 = document.getElementById('btn6').value;
+
+            if (d2 == ' ') {
+                document.getElementById('btn2').value = d3;
+                document.getElementById('btn3').value = ' ';
+            }
+            if (d6 == ' ') {
+                document.getElementById('btn6').value = d3;
+                document.getElementById('btn3').value = ' ';
+            }
+        }
+
+        function b4() {
+            var d4 = document.getElementById('btn4').value;
+            var d1 = document.getElementById('btn1').value;
+            var d5 = document.getElementById('btn5').value;
+            var d7 = document.getElementById('btn7').value;
+
+            if (d1 == ' ') {
+                document.getElementById('btn1').value = d4;
+                document.getElementById('btn4').value = ' ';
+            }
+            if (d5 == ' ') {
+                document.getElementById('btn5').value = d4;
+                document.getElementById('btn4').value = ' ';
+            }
+            if (d7 == ' ') {
+                document.getElementById('btn7').value = d4;
+                document.getElementById('btn4').value = ' ';
+            }
+        }
+
+        function b5() {
+            var d5 = document.getElementById('btn5').value;
+            var d2 = document.getElementById('btn2').value;
+            var d4 = document.getElementById('btn4').value;
+            var d8 = document.getElementById('btn8').value;
+            var d6 = document.getElementById('btn6').value;
+
+            if (d2 == ' ') {
+                document.getElementById('btn2').value = d5;
+                document.getElementById('btn5').value = ' ';
+            }
+            if (d4 == ' ') {
+                document.getElementById('btn4').value = d5;
+                document.getElementById('btn5').value = ' ';
+            }
+            if (d8 == ' ') {
+                document.getElementById('btn8').value = d5;
+                document.getElementById('btn5').value = ' ';
+            }
+            if (d6 == ' ') {
+                document.getElementById('btn6').value = d5;
+                document.getElementById('btn5').value = ' ';
+            }
+        }
+
+        function b6() {
+            var d6 = document.getElementById('btn6').value;
+            var d3 = document.getElementById('btn3').value;
+            var d5 = document.getElementById('btn5').value;
+            var d9 = document.getElementById('btn9').value;
+
+            if (d3 == ' ') {
+                document.getElementById('btn3').value = d6;
+                document.getElementById('btn6').value = ' ';
+            }
+            if (d5 == ' ') {
+                document.getElementById('btn5').value = d6;
+                document.getElementById('btn6').value = ' ';
+            }
+            if (d9 == ' ') {
+                document.getElementById('btn9').value = d6;
+                document.getElementById('btn6').value = ' ';
+            }
+        }
+
+        function b7() {
+            var d7 = document.getElementById('btn7').value;
+            var d4 = document.getElementById('btn4').value;
+            var d8 = document.getElementById('btn8').value;
+
+            if (d4 == ' ') {
+                document.getElementById('btn4').value = d7;
+                document.getElementById('btn7').value = ' ';
+            }
+            if (d8 == ' ') {
+                document.getElementById('btn8').value = d7;
+                document.getElementById('btn7').value = ' ';
+            }
+        }
+
+        function b8() {
+            var d8 = document.getElementById('btn8').value;
+            var d7 = document.getElementById('btn7').value;
+            var d5 = document.getElementById('btn5').value;
+            var d9 = document.getElementById('btn9').value;
+
+            if (d7 == ' ') {
+                document.getElementById('btn7').value = d8;
+                document.getElementById('btn8').value = ' ';
+            }
+            if (d5 == ' ') {
+                document.getElementById('btn5').value = d8;
+                document.getElementById('btn8').value = ' ';
+            }
+            if (d9 == ' ') {
+                document.getElementById('btn9').value = d8;
+                document.getElementById('btn8').value = ' ';
+            }
+        }
+
+        function b9() {
+            var d9 = document.getElementById('btn9').value;
+            var d8 = document.getElementById('btn8').value;
+            var d6 = document.getElementById('btn6').value;
+
+            if (d8 == ' ') {
+                document.getElementById('btn8').value = d9;
+                document.getElementById('btn9').value = ' ';
+            }
+            if (d6 == ' ') {
+                document.getElementById('btn6').value = d9;
+                document.getElementById('btn9').value = ' ';
+            }
+        }
+
+        function h1() {
+            location.reload()
+        }
+
+        function win() {
+            var d1 = document.getElementById('btn1').value;
+            var d2 = document.getElementById('btn2').value;
+            var d3 = document.getElementById('btn3').value;
+            var d4 = document.getElementById('btn4').value;
+            var d5 = document.getElementById('btn5').value;
+            var d6 = document.getElementById('btn6').value;
+            var d7 = document.getElementById('btn7').value;
+            var d8 = document.getElementById('btn8').value;
+            var d9 = document.getElementById('btn9').value;
+
+            if (d1 == '1' && d2 == '2' && d3 == '3' && d4 == '4' && d5 == '5' && d6 == '6' && d7 == '7' && d8 == '8' && d9 == ' ') {
+                alert('Match Is Win')
+            }
+        }
+    </script>
+
+</body>
+
+</html>
